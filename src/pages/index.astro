@@ -78,6 +78,44 @@ data.orders.forEach((order) => {
 <Layout title="Astro Ecommerce">
 	<main>
     <Navbar />
+    <section class="py-6 bg-gray-100 border-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <span class="badge bg-gradient-info mb-3">Cloudflare Workers Ready</span>
+            <h1 class="display-5 font-weight-bolder mb-3">Astro Ecommerce</h1>
+            <p class="lead text-secondary mb-4">
+              一个可直接部署到 Cloudflare Workers 的 Astro 电商前端模板。当前版本使用本地静态数据渲染商品、购物车和订单示例，后续可以通过环境变量接入 Payload CMS。
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-center">
+              <a
+                class="btn btn-dark mb-0"
+                href="https://deploy.workers.cloudflare.com/?url=https://github.com/rainco2008/astro-ecommerce"
+                target="_blank"
+                rel="noreferrer"
+              >
+                一键部署到 Cloudflare
+              </a>
+              <a
+                href="https://deploy.workers.cloudflare.com/?url=https://github.com/rainco2008/astro-ecommerce"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://deploy.workers.cloudflare.com/button"
+                  alt="Deploy to Cloudflare Workers"
+                  width="180"
+                  height="32"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <img class="img-fluid rounded-3 shadow" src={`${import.meta.env.BASE_URL}images/product1.jpg`} alt="Astro Ecommerce product preview" />
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container mt-5">
       <h3>Product Lists</h3>
       <p>Components and blocks for Product Lists</p>
